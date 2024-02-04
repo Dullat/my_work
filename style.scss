@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    font-family: poppins;
+}
+
+/* utility */
+
+.grid {
+    display: grid;
+}
+
+.flex {
+    display: flex;
+}
+
+svg {
+    width: 40px;
+    fill: --svg-color;
+}
+
+.btn {
+    padding: .5rem 0px;
+    width: 5rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: --btn-color;
+    cursor: pointer;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* wrapper */
+
+.wrapper {
+    grid-template-columns: 1fr 5fr;
+}
+
+.dashboard {
+    padding: 1rem;
+    align-content: start;
+    gap: 4rem;
+
+    >div {
+        display: flex;
+        align-items: center;
+        height: 5rem;
+
+        svg {
+            width: 70px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+    }
+
+    ul {
+        display: grid;
+        gap: 1.5rem;
+        padding-inline: 1rem;
+        align-content: center;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            font-weight: 600;
+        }
+    }
+}
+
+.main {
+    align-content: start;
+
+    .header {
+        box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.5);
+
+        .header-top {
+            // background-color: aqua;
+            padding: 1rem;
+            padding-inline: 1rem;
+            gap: .5rem;
+            align-items: center;
+
+            svg {
+                width: 30px;
+            }
+
+            svg+input+svg {
+                margin-left: auto;
+            }
+
+            input {
+                border-radius: 1rem;
+                font-size: 1rem;
+                font-family: poppins;
+                border: 0px;
+                background-color: rgb(116, 134, 128);
+                outline: none;
+                flex-grow: .5;
+                padding: .2rem;
+                padding-inline: 1rem;
+            }
+        }
+
+        .header-bottom {
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+
+            .header-profile {
+                grid-template-areas: "img p"
+                    "img h1";
+                grid-template-rows: 1fr 2fr;
+                gap: .8rem;
+                row-gap: 0px;
+                align-content: center;
+
+
+                div {
+                    background: url("./images/MIYKU.gif");
+                    grid-area: img;
+                    height: 60px;
+                    aspect-ratio: 1;
+                    background-size: cover;
+                    background-position: center;
+                    border-radius: 100vh;
+                }
+
+                p {
+                    grid-area: p;
+                    align-self: baseline;
+                }
+
+                h1 {
+                    grid-area: h1;
+                    line-height: 1.5rem;
+                    font-size: 1.5rem;
+                }
+            }
+
+            div:nth-child(2) {
+                display: flex;
+                align-items: center;
+                gap: 4vw;
+            }
+        }
+    }
+
+    .menu {
+        grid-template-columns: 2.5fr 1fr;
+
+        .projects {
+            padding: 1rem;
+
+            div {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+
+                .project {
+                    padding: 2rem;
+                    padding-inline: 1rem;
+                    background: aqua;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    border-radius: 1rem;
+                    border-left: .5rem solid gray;
+
+                    .title {
+                        font-weight: 600;
+                        font-size: 1.2rem;
+                    }
+
+                    :last-child {
+                        display: flex;
+                        justify-content: end;
+                        gap: 1rem;
+
+                        a {
+                            svg {
+                                width: 30px;
+                                aspect-ratio: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .a-t {
+            display: grid;
+            padding: 1rem;
+
+            .announcements {
+                >div:nth-child(2) {
+                    padding: 1rem;
+                    background: aqua;
+                    border-radius: 1rem;
+
+                    hr {
+                        margin: 1rem 0;
+                    }
+
+                    .announcement > .title {
+                        margin-bottom: .5rem;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
