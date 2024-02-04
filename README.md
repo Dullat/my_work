@@ -1,2 +1,2 @@
 # my_work
-dashboard
+its a dashboard contains some of my projects 
