@@ -6,6 +6,7 @@
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 ul {
@@ -14,6 +15,17 @@ ul {
 
 body {
   font-family: poppins;
+}
+
+body {
+  background: #cbd5e1;
+  --card-color: #f9fafb;
+  --dashboard-bg: #38bdf8;
+  --header-bg: #f9fafb;
+  --input-color: #cbd5e1;
+  --dashboard-svg-fill: #f9fafb;
+  --btn-bg: #38bdf8;
+  --btn-color: #f9fafb;
 }
 
 /* utility */
@@ -37,6 +49,8 @@ svg {
   border: none;
   background-color: --btn-color;
   cursor: pointer;
+  background: var(--btn-bg);
+  color: var(--btn-color);
 }
 
 .title {
@@ -48,12 +62,21 @@ svg {
 /* wrapper */
 .wrapper {
   grid-template-columns: 1fr 5fr;
+  position: relative;
 }
 
 .dashboard {
   padding: 1rem;
   align-content: start;
   gap: 4rem;
+  height: 100vh;
+  background: var(--dashboard-bg);
+  color: var(--dashboard-svg-fill);
+  position: sticky;
+  top: 0px;
+}
+.dashboard svg {
+  fill: var(--dashboard-svg-fill);
 }
 .dashboard > div {
   display: flex;
@@ -85,6 +108,7 @@ svg {
 }
 .main .header {
   box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.5);
+  background: var(--header-bg);
 }
 .main .header .header-top {
   padding: 1rem;
@@ -103,7 +127,7 @@ svg {
   font-size: 1rem;
   font-family: poppins;
   border: 0px;
-  background-color: rgb(116, 134, 128);
+  background-color: var(--input-color);
   outline: none;
   flex-grow: 0.5;
   padding: 0.2rem;
@@ -142,7 +166,7 @@ svg {
 .main .header .header-bottom div:nth-child(2) {
   display: flex;
   align-items: center;
-  gap: 4vw;
+  gap: 2vw;
 }
 .main .menu {
   grid-template-columns: 2.5fr 1fr;
@@ -158,7 +182,7 @@ svg {
 .main .menu .projects div .project {
   padding: 2rem;
   padding-inline: 1rem;
-  background: aqua;
+  background: var(--card-color);
   display: grid;
   grid-template-columns: 1fr;
   border-radius: 1rem;
@@ -183,7 +207,7 @@ svg {
 }
 .main .menu .a-t .announcements > div:nth-child(2) {
   padding: 1rem;
-  background: aqua;
+  background: var(--card-color);
   border-radius: 1rem;
 }
 .main .menu .a-t .announcements > div:nth-child(2) hr {
@@ -192,4 +216,26 @@ svg {
 .main .menu .a-t .announcements > div:nth-child(2) .announcement > .title {
   margin-bottom: 0.5rem;
   font-size: 1rem;
+}
+.main .menu .a-t .social-profiles .title {
+  margin-top: 1rem;
+}
+.main .menu .a-t .social-profiles > div:nth-child(2) {
+  background: var(--card-color);
+  padding: 1rem;
+  border-radius: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+.main .menu .a-t .social-profiles > div:nth-child(2) hr {
+  margin: 0.01rem 0;
+}
+.main .menu .a-t .social-profiles > div:nth-child(2) > a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.main .menu .a-t .social-profiles > div:nth-child(2) > a p {
+  font-weight: 600;
+  font-size: 0.9rem;
 }/*# sourceMappingURL=style.css.map */
