@@ -55,4 +55,7 @@
     .header-bottom .header-buttons .btn:nth-child(2) {
         display: none;
     }
+
+    .html {
+        font-size: 14px;
 }
