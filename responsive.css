@@ -60,3 +60,7 @@
     html {
         font-size: 12px;
 }
+
+.wrapper {
+    width: 100dvw;
+}
