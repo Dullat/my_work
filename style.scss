@@ -6,6 +6,7 @@
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 ul {
@@ -14,6 +15,33 @@ ul {
 
 body {
     font-family: poppins;
+}
+
+// theme
+
+body {
+    // white
+    transition: all .5s;
+    background: #cbd5e1;
+    --card-color: #f9fafb;
+    --dashboard-bg: #38bdf8;
+    --header-bg: #f9fafb;
+    --input-color: #cbd5e1;
+    --dashboard-svg-fill: #f9fafb;
+    --btn-bg: #38bdf8;
+    --btn-color: #f9fafb;
+}
+
+body[dark] {
+    background: #141516;
+    --card-color: #414a54;
+    --dashboard-bg: #073042;
+    --header-bg: #414a54;
+    --input-color: #4c4d4d;
+    --dashboard-svg-fill: #adadad;
+    --btn-bg: #a1a2a2;
+    --btn-color: #000000;
+    color: rgb(213, 213, 213);
 }
 
 /* utility */
@@ -38,6 +66,8 @@ svg {
     border: none;
     background-color: --btn-color;
     cursor: pointer;
+    background: var(--btn-bg);
+    color: var(--btn-color);
 }
 
 .title {
@@ -50,12 +80,23 @@ svg {
 
 .wrapper {
     grid-template-columns: 1fr 5fr;
+    position: relative;
 }
 
 .dashboard {
     padding: 1rem;
     align-content: start;
     gap: 4rem;
+    height: 100vh;
+    background: var(--dashboard-bg);
+    color: var(--dashboard-svg-fill);
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+
+    svg {
+        fill: var(--dashboard-svg-fill);
+    }
 
     >div {
         display: flex;
@@ -92,6 +133,9 @@ svg {
 
     .header {
         box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.5);
+        background: var(--header-bg);
+        position: sticky;
+        top: 0;
 
         .header-top {
             // background-color: aqua;
@@ -113,11 +157,19 @@ svg {
                 font-size: 1rem;
                 font-family: poppins;
                 border: 0px;
-                background-color: rgb(116, 134, 128);
+                background-color: var(--input-color);
                 outline: none;
                 flex-grow: .5;
                 padding: .2rem;
                 padding-inline: 1rem;
+                width: 100px;
+                flex-shrink: 1;
+            }
+
+            @media screen and (max-width: 500px) {
+                .input {
+                    display: none;
+                }
             }
         }
 
@@ -160,7 +212,7 @@ svg {
             div:nth-child(2) {
                 display: flex;
                 align-items: center;
-                gap: 4vw;
+                gap: 2vw;
             }
         }
     }
@@ -174,12 +226,13 @@ svg {
             div {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                gap: 1rem;
+                gap: 1.3rem;
 
                 .project {
                     padding: 2rem;
                     padding-inline: 1rem;
-                    background: aqua;
+                    background: var(--card-color);
+                    ;
                     display: grid;
                     grid-template-columns: 1fr;
                     border-radius: 1rem;
@@ -208,24 +261,66 @@ svg {
 
         .a-t {
             display: grid;
+            align-content: start;
             padding: 1rem;
 
             .announcements {
                 >div:nth-child(2) {
                     padding: 1rem;
-                    background: aqua;
+                    background: var(--card-color);
                     border-radius: 1rem;
 
                     hr {
                         margin: 1rem 0;
                     }
 
-                    .announcement > .title {
+                    .announcement>.title {
                         margin-bottom: .5rem;
                         font-size: 1rem;
+
+                    }
+                }
+            }
+
+            .social-profiles {
+                .title {
+                    margin-top: 1rem;
+                }
+
+                >div:nth-child(2) {
+                    background: var(--card-color);
+                    padding: 1rem;
+                    border-radius: 1rem;
+                    display: grid;
+                    gap: 1rem;
+
+                    hr {
+                        margin: .01rem 0;
+                    }
+
+                    >a {
+                        display: flex;
+                        align-items: center;
+                        gap: .8rem;
+
+                        p {
+                            font-weight: 600;
+                            font-size: .9rem;
+                        }
                     }
                 }
             }
         }
     }
+}
+
+// animatiuon
+
+.toggle-btn {
+    transition: all .5s;
+    transform: rotate(180deg);
+}
+
+.toggle-btn[dark] {
+    transform: rotate(0deg);
 }
