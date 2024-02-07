@@ -18,6 +18,7 @@ body {
 }
 
 body {
+  transition: all 0.5s;
   background: #cbd5e1;
   --card-color: #f9fafb;
   --dashboard-bg: #38bdf8;
@@ -26,6 +27,18 @@ body {
   --dashboard-svg-fill: #f9fafb;
   --btn-bg: #38bdf8;
   --btn-color: #f9fafb;
+}
+
+body[dark] {
+  background: #141516;
+  --card-color: #414a54;
+  --dashboard-bg: #073042;
+  --header-bg: #414a54;
+  --input-color: #4c4d4d;
+  --dashboard-svg-fill: #adadad;
+  --btn-bg: #a1a2a2;
+  --btn-color: #000000;
+  color: rgb(213, 213, 213);
 }
 
 /* utility */
@@ -74,6 +87,7 @@ svg {
   color: var(--dashboard-svg-fill);
   position: sticky;
   top: 0px;
+  z-index: 1;
 }
 .dashboard svg {
   fill: var(--dashboard-svg-fill);
@@ -109,6 +123,8 @@ svg {
 .main .header {
   box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.5);
   background: var(--header-bg);
+  position: sticky;
+  top: 0;
 }
 .main .header .header-top {
   padding: 1rem;
@@ -132,6 +148,13 @@ svg {
   flex-grow: 0.5;
   padding: 0.2rem;
   padding-inline: 1rem;
+  width: 100px;
+  flex-shrink: 1;
+}
+@media screen and (max-width: 500px) {
+  .main .header .header-top .input {
+    display: none;
+  }
 }
 .main .header .header-bottom {
   justify-content: space-between;
@@ -177,7 +200,7 @@ svg {
 .main .menu .projects div {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 1.3rem;
 }
 .main .menu .projects div .project {
   padding: 2rem;
@@ -203,6 +226,7 @@ svg {
 }
 .main .menu .a-t {
   display: grid;
+  align-content: start;
   padding: 1rem;
 }
 .main .menu .a-t .announcements > div:nth-child(2) {
@@ -238,4 +262,13 @@ svg {
 .main .menu .a-t .social-profiles > div:nth-child(2) > a p {
   font-weight: 600;
   font-size: 0.9rem;
+}
+
+.toggle-btn {
+  transition: all 0.5s;
+  transform: rotate(180deg);
+}
+
+.toggle-btn[dark] {
+  transform: rotate(0deg);
 }/*# sourceMappingURL=style.css.map */
