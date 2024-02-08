@@ -1,6 +1,10 @@
 .menu-btn {
     margin-right: 1rem;
     display: none;
+    height: 27px;
+    aspect-ratio: 1;
+    background: url('./images/menu-icon.png');
+    background-size: cover;
 }
 
 @media screen and (max-width: 1200px) {
