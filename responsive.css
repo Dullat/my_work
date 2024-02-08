@@ -28,6 +28,10 @@
         --w: clamp(15rem, 30vw, 20rem);
     }
 
+    i {
+        transition: all .8s;
+    }
+
     i[visible] {
         left: var(--w);
         height: 100vh;
