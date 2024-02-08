@@ -9,8 +9,7 @@
     }
     
     .menu-btn {
-        display: unset;
-        cursor: pointer;
+        display: flex;
     }
 
     .dashboard {
@@ -18,21 +17,16 @@
         top: 0;
         --w: clamp(15rem, 30vw, 20rem);
         width: var(--w);
-        transition: all .8s;
+        transition: all .5s;
         transform: translateX(-100%);
     }
 
     .dashboard[visible] {
         transform: translateX(0%);
-        transition: all .8s;
-        --w: clamp(15rem, 30vw, 20rem);
     }
 
     i {
-        transition: all .8s;
-    }
-
-    i[visible] {
+        display: none;
         left: var(--w);
         height: 100vh;
         width: 100vw;
@@ -42,6 +36,10 @@
         top: 0;
         right: 0;
         z-index: 1;
+    }
+
+    i[visible] {
+        display: flex;
     }
 }
 
