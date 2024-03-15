@@ -21,7 +21,7 @@ body {
 
 body {
     // white
-    transition: all .5s;
+    transition: all 0.5s;
     background: #cbd5e1;
     --card-color: #f9fafb;
     --dashboard-bg: #38bdf8;
@@ -41,7 +41,7 @@ body[dark] {
     --dashboard-svg-fill: #adadad;
     --btn-bg: #a1a2a2;
     --btn-color: #000000;
-    color: rgb(213, 213, 213);
+    color: rgb(235, 235, 235);
 }
 
 /* utility */
@@ -60,7 +60,7 @@ svg {
 }
 
 .btn {
-    padding: .5rem 0px;
+    padding: 0.5rem 0px;
     width: 5rem;
     border-radius: 1rem;
     border: none;
@@ -98,7 +98,7 @@ svg {
         fill: var(--dashboard-svg-fill);
     }
 
-    >div {
+    > div {
         display: flex;
         align-items: center;
         height: 5rem;
@@ -122,7 +122,7 @@ svg {
         li {
             display: flex;
             align-items: center;
-            gap: .5rem;
+            gap: 0.5rem;
             font-weight: 600;
         }
     }
@@ -141,14 +141,14 @@ svg {
             // background-color: aqua;
             padding: 1rem;
             padding-inline: 1rem;
-            gap: .5rem;
+            gap: 0.5rem;
             align-items: center;
 
             svg {
                 width: 30px;
             }
 
-            svg+input+svg {
+            svg + input + svg {
                 margin-left: auto;
             }
 
@@ -159,8 +159,8 @@ svg {
                 border: 0px;
                 background-color: var(--input-color);
                 outline: none;
-                flex-grow: .5;
-                padding: .2rem;
+                flex-grow: 0.5;
+                padding: 0.2rem;
                 padding-inline: 1rem;
                 width: 100px;
                 flex-shrink: 1;
@@ -179,13 +179,13 @@ svg {
             padding: 1rem;
 
             .header-profile {
-                grid-template-areas: "img p"
+                grid-template-areas:
+                    "img p"
                     "img h1";
                 grid-template-rows: 1fr 2fr;
-                gap: .8rem;
+                gap: 0.8rem;
                 row-gap: 0px;
                 align-content: center;
-
 
                 div {
                     background: url("./images/MIYKU.gif");
@@ -231,12 +231,12 @@ svg {
                 .project {
                     padding: 2rem;
                     padding-inline: 1rem;
-                    background: var(--card-color);
-                    ;
+                    background-color: var(--card-color);
                     display: grid;
                     grid-template-columns: 1fr;
                     border-radius: 1rem;
-                    border-left: .5rem solid gray;
+                    border-left: 0.5rem solid gray;
+                    text-shadow: 0 0 1px #0000007c;
 
                     .title {
                         font-weight: 600;
@@ -256,6 +256,40 @@ svg {
                         }
                     }
                 }
+
+                .project1 {
+                    background: linear-gradient(120deg, var(--card-color), rgba(189, 180, 180, 0.801) 100%),
+                        url("./images/sites/1.png");
+                }
+
+                .project2 {
+                    background: linear-gradient(120deg ,var(--card-color), rgba(189, 180, 180, 0.801) 100%),
+                        url("./images/sites/second.png");  
+                }
+
+                .project3 {
+                    background: linear-gradient(120deg ,var(--card-color), rgba(189, 180, 180, 0.801) 100%),
+                        url("./images/sites/3rd.png");  
+                }
+
+                .project4 {
+                    background: linear-gradient(120deg ,var(--card-color), rgba(189, 180, 180, 0.801) 100%),
+                        url("./images/sites/4th.png");  
+                }
+
+                .project5 {
+                    background: linear-gradient(120deg ,var(--card-color), rgba(189, 180, 180, 0.801) 100%),
+                        url("./images/sites/5th.png");  
+                }
+
+                .project6 {
+                    background: linear-gradient(120deg ,var(--card-color), rgba(189, 180, 180, 0.801) 100%),
+                        url("./images/sites/6th.png");  
+                }
+
+                .project {
+                    background-size: cover;
+                }
             }
         }
 
@@ -265,7 +299,7 @@ svg {
             padding: 1rem;
 
             .announcements {
-                >div:nth-child(2) {
+                > div:nth-child(2) {
                     padding: 1rem;
                     background: var(--card-color);
                     border-radius: 1rem;
@@ -274,10 +308,9 @@ svg {
                         margin: 1rem 0;
                     }
 
-                    .announcement>.title {
-                        margin-bottom: .5rem;
+                    .announcement > .title {
+                        margin-bottom: 0.5rem;
                         font-size: 1rem;
-
                     }
                 }
             }
@@ -287,7 +320,7 @@ svg {
                     margin-top: 1rem;
                 }
 
-                >div:nth-child(2) {
+                > div:nth-child(2) {
                     background: var(--card-color);
                     padding: 1rem;
                     border-radius: 1rem;
@@ -295,17 +328,17 @@ svg {
                     gap: 1rem;
 
                     hr {
-                        margin: .01rem 0;
+                        margin: 0.01rem 0;
                     }
 
-                    >a {
+                    > a {
                         display: flex;
                         align-items: center;
-                        gap: .8rem;
+                        gap: 0.8rem;
 
                         p {
                             font-weight: 600;
-                            font-size: .9rem;
+                            font-size: 0.9rem;
                         }
                     }
                 }
@@ -317,7 +350,7 @@ svg {
 // animatiuon
 
 .toggle-btn {
-    transition: all .5s;
+    transition: all 0.5s;
     transform: rotate(180deg);
 }
 

@@ -38,7 +38,7 @@ body[dark] {
   --dashboard-svg-fill: #adadad;
   --btn-bg: #a1a2a2;
   --btn-color: #000000;
-  color: rgb(213, 213, 213);
+  color: rgb(235, 235, 235);
 }
 
 /* utility */
@@ -205,11 +205,12 @@ svg {
 .main .menu .projects div .project {
   padding: 2rem;
   padding-inline: 1rem;
-  background: var(--card-color);
+  background-color: var(--card-color);
   display: grid;
   grid-template-columns: 1fr;
   border-radius: 1rem;
   border-left: 0.5rem solid gray;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.4862745098);
 }
 .main .menu .projects div .project .title {
   font-weight: 600;
@@ -223,6 +224,27 @@ svg {
 .main .menu .projects div .project :last-child a svg {
   width: 30px;
   aspect-ratio: 1;
+}
+.main .menu .projects div .project1 {
+  background: linear-gradient(120deg, var(--card-color), rgba(189, 180, 180, 0.801) 100%), url("./images/sites/1.png");
+}
+.main .menu .projects div .project2 {
+  background: linear-gradient(120deg, var(--card-color), rgba(189, 180, 180, 0.801) 100%), url("./images/sites/second.png");
+}
+.main .menu .projects div .project3 {
+  background: linear-gradient(120deg, var(--card-color), rgba(189, 180, 180, 0.801) 100%), url("./images/sites/3rd.png");
+}
+.main .menu .projects div .project4 {
+  background: linear-gradient(120deg, var(--card-color), rgba(189, 180, 180, 0.801) 100%), url("./images/sites/4th.png");
+}
+.main .menu .projects div .project5 {
+  background: linear-gradient(120deg, var(--card-color), rgba(189, 180, 180, 0.801) 100%), url("./images/sites/5th.png");
+}
+.main .menu .projects div .project6 {
+  background: linear-gradient(120deg, var(--card-color), rgba(189, 180, 180, 0.801) 100%), url("./images/sites/6th.png");
+}
+.main .menu .projects div .project {
+  background-size: cover;
 }
 .main .menu .a-t {
   display: grid;
