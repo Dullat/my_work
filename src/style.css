@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* display: flex;
+  justify-content: space-around; */
+  font-family: "Roboto", serif;
+}
+
+#app {
+  max-width: 1200px;
+  /* flex-grow: 1; */
+  margin: auto;
+  background-color: aliceblue;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+nav > ul {
+  display: flex;
+  list-style-type: none;
+  gap: calc(.5rem + 1vw + 1rem);
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
