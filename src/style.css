@@ -11,17 +11,25 @@ body {
 }
 
 #app {
-  max-width: 1200px;
+  max-width: 1600px;
   /* flex-grow: 1; */
   margin: auto;
   background-color: aliceblue;
 }
 
 header {
+  width: 100%;
+  padding: 2rem;
+}
+
+.h-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+}
+
+.subtitle {
+  margin-top: .5rem;
 }
 
 nav > ul {
@@ -31,62 +39,38 @@ nav > ul {
 }
 
 .nav-logo {
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: 600;
 }
 
-hero {
+
+hr{
+  margin: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* projects main section */
+
+#projects-main{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  min-height: fit-content;
-  width: 100%;
-  padding: 2rem 2rem;
 }
 
-.left-hero {
+#projects-main .left{
+  background-color:rgba(49, 49, 49, 0.247);
+  margin: .5rem;
+  border-radius: .5rem;
+}
+
+#projects-main .left li {
   display: flex;
   align-items: center;
+  justify-content: start;
+  padding: 1rem 1rem;
+  gap: 1rem;
 }
 
-.hero-content > h1 {
-  margin-bottom: 2rem;
-}
-
-.right-hero {
-  overflow: hidden;
-  width: 100%;
-  aspect-ratio: 5/3;
-  position: relative;
-}
-
-.hero-banner {
-  height: 100%;
-  position: relative;
-  /* background-color: red; */
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: .2rem;
-  position: relative;
-}
-
-.right-hero-comment {
-  position: absolute;
-  bottom: .5rem;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-[class^="bar-"] {
-  background-color: green;
-  height: 100%;
-  position: relative;
-  top: -20%;
-  transition: .5s all;
-}
-
-[class^="bar-"]:hover {
-  transform: rotateZ(2deg) scale(150%);
-  border: 2px solid white;
-  z-index: 99;
+.hidden-image{
+  display: none;
 }
