@@ -6,7 +6,7 @@ async function loadProjects(){
     const list_container = document.querySelector('.projects_list')
     const preview_image = document.querySelector('.preview-image')
     const description = document.querySelector(".description")
-    const tech_stack = document.querySelector("tech_stack")
+    const tech_stack = document.querySelector(".tech_stack")
     const live_link = document.querySelector(".live-link")
     const code_link = document.querySelector(".code-link")
 
