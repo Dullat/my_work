@@ -1,4 +1,4 @@
-let projects_path = '/projects.json';
+let projects_path = './projects.json';
 
 export async function getProducts() {
     try {
