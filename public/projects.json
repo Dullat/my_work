@@ -1,27 +1,30 @@
 [
     {
-        "name": "Portfolio Website",
+        "name": "Marathon the Game",
         "image": "images/portfolio.png",
-        "description": "A personal portfolio to showcase my projects and skills.",
-        "tech": "HTML, CSS, JavaScript",
-        "live": "https://example.com/portfolio",
-        "code": "https://github.com/username/portfolio"
+        "video": "assets/vids/marathon.webm",
+        "description": "A game Marathon's webpage. Developed while learning React and GSAP.",
+        "tech": "React, Tailwind, JavaScript, GSAP",
+        "live": "https://dullat.github.io/marathon/",
+        "code": "https://github.com/Dullat/marathon"
     },
     {
-        "name": "Task Manager",
+        "name": "iPhone",
         "image": "images/task-manager.png",
-        "description": "A web app to manage daily tasks with deadlines and priorities.",
-        "tech": "React, Node.js, MongoDB",
-        "live": "https://example.com/task-manager",
-        "code": "https://github.com/username/task-manager"
+        "video": "assets/vids/iphone.webm",
+        "description": "Comonants from apple's website like hero and implementation of complex video carosuel using gsap. Objective was to learn GSAP.",
+        "tech": "React, GSAP, Js",
+        "live": "https://dullat.github.io/apple-store-componants/",
+        "code": "https://github.com/Dullat/apple-store-componants"
     },
     {
-        "name": "E-commerce Store",
+        "name": "Jobs",
         "image": "images/ecommerce.png",
-        "description": "A mock e-commerce site with product listings and cart functionality.",
-        "tech": "Vue.js, Firebase",
-        "live": "https://example.com/store",
-        "code": "https://github.com/username/ecommerce"
+        "video": "assets/vids/ReactApp.webm",
+        "description": "It is a job listing webApp allow Developers and Companies to show, browse, add, edit and delete jobs.",
+        "tech": "React, Json-Server, Router",
+        "live": "https://dullat.github.io/",
+        "code": "https://github.com/Dullat/React-jobs"
     },
     {
         "name": "Weather App",

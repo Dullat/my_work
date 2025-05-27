@@ -9,6 +9,7 @@ async function loadProjects(){
     const tech_stack = document.querySelector(".tech_stack")
     const live_link = document.querySelector(".live-link")
     const code_link = document.querySelector(".code-link")
+    const project_vid = document.querySelector("#project-video")
 
     products.forEach((element, index) => {
         const li = document.createElement('li')
@@ -21,11 +22,20 @@ async function loadProjects(){
         `
 
         li.addEventListener('click', () => {
-            preview_image.src = element.image
             description.textContent = element.description
             tech_stack.textContent = element.tech
             live_link.href = element.live
             code_link.href = element.code
+            project_vid.src = element.video
+            project_vid.parentElement.load()
+            console.log(project_vid)
+
+            // styling
+            list_container.querySelectorAll('li').forEach(item => {
+                item.classList.remove("highlighted")
+            })
+
+            li.classList.add("highlighted")
         })
         list_container.appendChild(li)
     });

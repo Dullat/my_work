@@ -136,6 +136,12 @@ hr{
   perspective: 100px;
 }
 
+.project-video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 @media (max-width: 900px) {
 
   body{
@@ -207,4 +213,11 @@ hr{
   #projects-main .left li:nth-child(odd):hover {
     transform: rotate(-.5deg)
   }
+}
+
+/* selected item  */
+
+.highlighted {
+  background-color: rgb(80, 173, 255) !important;
+  transform: scale(101%);
 }
