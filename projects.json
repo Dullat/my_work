@@ -29,6 +29,7 @@
     {
         "name": "Weather App",
         "image": "images/weather-app.png",
+        "video" : "assets/",
         "description": "Displays weather forecasts using OpenWeather API.",
         "tech": "JavaScript, API, Bootstrap",
         "live": "https://example.com/weather",
@@ -43,36 +44,36 @@
         "code": "https://github.com/username/blog-platform"
     },
     {
-        "name": "Portfolio Website",
-        "image": "images/portfolio.png",
-        "description": "A personal portfolio to showcase my projects and skills.",
-        "tech": "HTML, CSS, JavaScript",
-        "live": "https://example.com/portfolio",
-        "code": "https://github.com/username/portfolio"
+        "name": "Blog Platform",
+        "image": "images/blog.png",
+        "description": "A platform for users to write and share blog posts.",
+        "tech": "Django, PostgreSQL",
+        "live": "https://example.com/blog",
+        "code": "https://github.com/username/blog-platform"
     },
     {
-        "name": "Task Manager",
-        "image": "images/task-manager.png",
-        "description": "A web app to manage daily tasks with deadlines and priorities.",
-        "tech": "React, Node.js, MongoDB",
-        "live": "https://example.com/task-manager",
-        "code": "https://github.com/username/task-manager"
+        "name": "Blog Platform",
+        "image": "images/blog.png",
+        "description": "A platform for users to write and share blog posts.",
+        "tech": "Django, PostgreSQL",
+        "live": "https://example.com/blog",
+        "code": "https://github.com/username/blog-platform"
     },
     {
-        "name": "E-commerce Store",
-        "image": "images/ecommerce.png",
-        "description": "A mock e-commerce site with product listings and cart functionality.",
-        "tech": "Vue.js, Firebase",
-        "live": "https://example.com/store",
-        "code": "https://github.com/username/ecommerce"
+        "name": "Blog Platform",
+        "image": "images/blog.png",
+        "description": "A platform for users to write and share blog posts.",
+        "tech": "Django, PostgreSQL",
+        "live": "https://example.com/blog",
+        "code": "https://github.com/username/blog-platform"
     },
     {
-        "name": "Weather App",
-        "image": "images/weather-app.png",
-        "description": "Displays weather forecasts using OpenWeather API.",
-        "tech": "JavaScript, API, Bootstrap",
-        "live": "https://example.com/weather",
-        "code": "https://github.com/username/weather-app"
+        "name": "Blog Platform",
+        "image": "images/blog.png",
+        "description": "A platform for users to write and share blog posts.",
+        "tech": "Django, PostgreSQL",
+        "live": "https://example.com/blog",
+        "code": "https://github.com/username/blog-platform"
     },
     {
         "name": "Blog Platform",
