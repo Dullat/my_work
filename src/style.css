@@ -102,10 +102,10 @@ hr{
   padding-bottom: 1rem;
 }
 
-#projects-main .right .image_con {
+#projects-main .right .project-video-con {
   width: 100%;
   aspect-ratio: 5/3;
-  background-color: bisque;
+  background-color: rgb(184, 184, 184);
   border-radius: .5rem;
 }
 
@@ -136,7 +136,7 @@ hr{
   perspective: 100px;
 }
 
-.project-video {
+.project-video-el {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -156,7 +156,7 @@ hr{
     order: -1;
   }
 
-  #projects-main .right .image_con{
+  #projects-main .right .project-video-con{
     max-height: 40dvh;
     width: unset;
   }
@@ -220,4 +220,33 @@ hr{
 .highlighted {
   background-color: rgb(80, 173, 255) !important;
   transform: scale(101%);
+}
+
+/* image loading */
+.project-video-con.loading {
+  position: relative;
+  background: #f6f7f8;
+  overflow: hidden;
+}
+
+.project-video-con.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: loadingShimmer 1.2s infinite;
+}
+
+@keyframes loadingShimmer {
+  100% {
+    left: 100%;
+  }
 }
