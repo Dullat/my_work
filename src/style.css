@@ -42,7 +42,7 @@ nav > ul {
 }
 
 .nav-logo {
-  font-size: 3rem;
+  font-size: clamp(2rem, calc(2rem + 2vw), 3rem);
   font-weight: 600;
 }
 
@@ -116,11 +116,11 @@ hr{
 #projects-main .links {
   display: flex;
   justify-content: end;
-  gap: 2rem;
+  gap: clamp(1rem, calc(.5rem + 3vw), 3rem);
 }
 
 #projects-main .links a {
-  padding: .5rem 2.5rem;
+  padding: .5rem clamp(1.5rem, calc(.5rem + 2vw), 3rem);
   background-color: aliceblue;
   border: rgba(0, 0, 0, 0.432) solid 1px;
   border-radius: 100vh;
@@ -183,9 +183,9 @@ hr{
     display: none;
   }
 
-  #projects-main .links {
+  /* #projects-main .links {
     gap: .2rem;
-  }
+  } */
   
 }
 
